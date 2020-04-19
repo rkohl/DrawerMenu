@@ -61,7 +61,7 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
     public var leftViewController: UIViewController?
     public var rightViewContoller: UIViewController?
 
-    internal var centerContainerView = UIView(frame: .zero)
+    public var centerContainerView = UIView(frame: .zero)
     internal var leftContainerView: UIView?
     internal var rightContainerView: UIView?
     internal let opacityView = UIView(frame: .zero)
