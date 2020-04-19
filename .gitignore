@@ -26,6 +26,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.ds_store
 
 ## Obj-C/Swift specific
 *.hmap
@@ -43,6 +44,7 @@ playground.xcworkspace
 # Package.pins
 # Package.resolved
 .build/
+.swiftpm/*
 
 # CocoaPods
 # We recommend against adding the Pods directory to your .gitignore. However
