@@ -18,6 +18,14 @@ public extension UIViewController {
     }
 }
 
+enum MenuDisplayMode {
+    case opened, closed
+}
+
+protocol MenuDelegate {
+    func menuDidChangeDisplayMode(_ mode: MenuDisplayMode, progress: CGFloat)
+}
+
 public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
 
     public enum PanGestureType { case pan, screenEdge, none }
@@ -60,6 +68,7 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
     public var centerViewController: UIViewController
     public var leftViewController: UIViewController?
     public var rightViewContoller: UIViewController?
+    public var delegate: MenuDelegate?
 
     public var centerContainerView = UIView(frame: .zero)
     internal var leftContainerView: UIView?
@@ -83,6 +92,7 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
             if leftViewController == nil { return }
             let ratio = min(max(newValue, 0), 1)
             style.leftTransition(menuWidth: leftMenuWidth, progress: ratio, drawer: self)
+            self.delegate?.menuDidChangeDisplayMode(.opened, progress: ratio)
         }
     }
 
@@ -95,6 +105,7 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
             if rightViewContoller == nil { return }
             let ratio = min(max(newValue, 0), 1)
             style.rightTransition(menuWidth: rightMenuWidth, progress: ratio, drawer: self)
+             self.delegate?.menuDidChangeDisplayMode(.opened, progress: ratio)
         }
     }
 
