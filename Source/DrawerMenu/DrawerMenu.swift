@@ -18,11 +18,11 @@ public extension UIViewController {
     }
 }
 
-enum MenuDisplayMode {
+public enum MenuDisplayMode {
     case opened, closed
 }
 
-protocol MenuDelegate {
+public protocol MenuDelegate {
     func menuDidChangeDisplayMode(_ mode: MenuDisplayMode, progress: CGFloat)
 }
 
