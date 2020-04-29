@@ -28,7 +28,7 @@ public class MenuNavigation: UINavigationController {
     navigationBar.layoutMargins.right = attributes.rightMargin
     navigationItem.largeTitleDisplayMode  = attributes.largeTitleDisplay
     navigationBar.shadowImage = UIImage()
-    navigationBar.barTintColor = attributes.barColor
+    navigationBar.barTintColor = .clear
     navigationBar.backgroundColor = .clear
     self.navigationBar.tintColor = attributes.tintColor
     self.navigationBar.isTranslucent = attributes.barTanslucent
