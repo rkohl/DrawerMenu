@@ -148,6 +148,23 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
         close(to: .left)
         close(to: .right)
     }
+    
+    public func replaceWithNavigation( center controller: UIViewController) {
+      let attributes = NavigationBarAttributes()
+      let view = MenuNavigation(rootViewController: controller, attributes)
+      centerViewController.view.removeFromSuperview()
+      centerViewController.removeFromParent()
+      centerViewController.willMove(toParent: self)
+      
+      centerViewController = view
+
+      addChild(centerViewController)
+      centerContainerView.addSubview(centerViewController.view)
+      centerViewController.didMove(toParent: self)
+
+      close(to: .left)
+      close(to: .right)
+    }
 
     public func open(to side: Side, animated: Bool = true, completion: (() -> Void)? = nil) {
         if side == .left {
