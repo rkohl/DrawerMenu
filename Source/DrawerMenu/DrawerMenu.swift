@@ -65,6 +65,7 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
     public private(set) var isOpenLeft: Bool = false
     public private(set) var isOpenRight: Bool = false
 
+    public var barTintColor: UIColor?
     public var centerViewController: UIViewController
     public var leftViewController: UIViewController?
     public var rightViewContoller: UIViewController?
@@ -150,7 +151,8 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
     }
     
     public func replaceWithNavigation( center controller: UIViewController) {
-      let attributes = NavigationBarAttributes()
+        var attributes = NavigationBarAttributes()
+        attributes.tintColor = barTintColor!
       let view = MenuNavigation(rootViewController: controller, attributes)
       centerViewController.view.removeFromSuperview()
       centerViewController.removeFromParent()
