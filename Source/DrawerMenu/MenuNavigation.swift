@@ -17,7 +17,7 @@ public class MenuNavigation: UINavigationController {
     self.setNBarConfig()
   }
     
-  required init?(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NsSCoder) {
     super.init(coder: aDecoder)
     self.setNBarConfig()
   }
