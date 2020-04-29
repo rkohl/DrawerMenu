@@ -34,6 +34,7 @@ public class MenuNavigation: UINavigationController {
     navigationBar.barTintColor = attributes.barColor
     navigationBar.backgroundColor = attributes.barBackgroundColor
     navigationBar.tintColor = attributes.tintColor
+    extendedLayoutIncludesOpaqueBars = true
     self.navigationBar.isTranslucent = attributes.barTanslucent
     self.view.backgroundColor = attributes.viewBackgroundColor
     self.navigationController?.navigationBar.layoutIfNeeded()
@@ -45,7 +46,7 @@ public struct NavigationBarAttributes {
     public var useLargeTitle: Bool = true
     public var leftMargin: CGFloat = 16
     public var rightMargin: CGFloat = 16
-    public var barColor: UIColor = .clear
+    public var barColor: UIColor = .systemGroupedBackground
     public var barBackgroundColor: UIColor = .clear
     public var tintColor: UIColor = UIColor.init(red: 224, green: 0, blue: 56, alpha: 1)
     public var barTanslucent: Bool = false
