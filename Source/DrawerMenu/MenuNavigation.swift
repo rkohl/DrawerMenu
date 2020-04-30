@@ -9,6 +9,7 @@ import UIKit
 
 public class MenuNavigation: UINavigationController {
   
+
   private var attributes: NavigationBarAttributes = NavigationBarAttributes()
     
   public init(rootViewController: UIViewController, _ attributes: NavigationBarAttributes) {
@@ -35,9 +36,10 @@ public class MenuNavigation: UINavigationController {
     navigationBar.barTintColor = attributes.barColor
     navigationBar.backgroundColor = attributes.barBackgroundColor
     navigationBar.tintColor = attributes.tintColor
-    //extendedLayoutIncludesOpaqueBars = true
+    extendedLayoutIncludesOpaqueBars = attributes.extendUnderBars
     self.navigationBar.isTranslucent = attributes.barTanslucent
     self.view.backgroundColor = attributes.viewBackgroundColor
+    
    
   }
 }
@@ -52,5 +54,7 @@ public struct NavigationBarAttributes {
     public var barTanslucent: Bool = false
     public var viewBackgroundColor: UIColor = .systemGroupedBackground
     public var largeTitleDisplay: UINavigationItem.LargeTitleDisplayMode = .always
+    public var extendUnderBars: Bool = false
+    
     public init() {}
 }
