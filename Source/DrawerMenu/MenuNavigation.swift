@@ -29,16 +29,16 @@ public class MenuNavigation: UINavigationController {
     navigationBar.prefersLargeTitles = attributes.useLargeTitle
     navigationBar.layoutMargins.left = attributes.leftMargin
     navigationBar.layoutMargins.right = attributes.rightMargin
+    navigationItem.largeTitleDisplayMode  = .never
     navigationItem.largeTitleDisplayMode  = attributes.largeTitleDisplay
     navigationBar.shadowImage = UIImage()
     navigationBar.barTintColor = attributes.barColor
     navigationBar.backgroundColor = attributes.barBackgroundColor
     navigationBar.tintColor = attributes.tintColor
-    extendedLayoutIncludesOpaqueBars = true
+    //extendedLayoutIncludesOpaqueBars = true
     self.navigationBar.isTranslucent = attributes.barTanslucent
     self.view.backgroundColor = attributes.viewBackgroundColor
-    self.navigationController?.navigationBar.layoutIfNeeded()
-    self.view.layoutIfNeeded()
+   
   }
 }
 
@@ -51,6 +51,6 @@ public struct NavigationBarAttributes {
     public var tintColor: UIColor = UIColor.init(red: 224, green: 0, blue: 56, alpha: 1)
     public var barTanslucent: Bool = false
     public var viewBackgroundColor: UIColor = .systemGroupedBackground
-    public var largeTitleDisplay: UINavigationItem.LargeTitleDisplayMode = .automatic
+    public var largeTitleDisplay: UINavigationItem.LargeTitleDisplayMode = .always
     public init() {}
 }
