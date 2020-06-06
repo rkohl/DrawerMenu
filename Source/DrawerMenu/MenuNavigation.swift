@@ -10,6 +10,10 @@ import UIKit
 public class MenuNavigation: UINavigationController {
   
 
+  public override var prefersHomeIndicatorAutoHidden: Bool {
+    return true
+  }
+  
   private var attributes: NavigationBarAttributes = NavigationBarAttributes()
     
   public init(rootViewController: UIViewController, _ attributes: NavigationBarAttributes) {
@@ -39,7 +43,7 @@ public class MenuNavigation: UINavigationController {
     extendedLayoutIncludesOpaqueBars = attributes.extendUnderBars
     self.navigationBar.isTranslucent = attributes.barTanslucent
     self.view.backgroundColor = attributes.viewBackgroundColor
-    
+    setNeedsUpdateOfHomeIndicatorAutoHidden()
    
   }
 }
