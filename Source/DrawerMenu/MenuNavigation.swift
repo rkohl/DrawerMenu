@@ -9,6 +9,9 @@ import UIKit
 
 public class MenuNavigation: UINavigationController {
   
+  public override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
+      return UIRectEdge.bottom
+  }
 
   public override var prefersHomeIndicatorAutoHidden: Bool {
     return true
@@ -44,7 +47,7 @@ public class MenuNavigation: UINavigationController {
     self.navigationBar.isTranslucent = attributes.barTanslucent
     self.view.backgroundColor = attributes.viewBackgroundColor
     setNeedsUpdateOfHomeIndicatorAutoHidden()
-   
+    view.layoutIfNeeded()
   }
 }
 
