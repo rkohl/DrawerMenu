@@ -10,7 +10,7 @@ import UIKit
 
 public enum FloatingPopDisplay: CGFloat {
   public typealias RawValue = CGFloat
-  case standard = 0.6, barButton = 0.8, large = 0.4
+  case standard = 0.6, barButton = 0.7, large = 0.4, n = 0.65, nn = 0.74
 }
 
 public struct FloatingPop: DrawerMenuStyle {
@@ -30,6 +30,10 @@ public struct FloatingPop: DrawerMenuStyle {
   
   public init(_ offset: FloatingPopDisplay) {
     leftMenuOffset = offset.rawValue
+  }
+  
+  public init(_ offset: CGFloat) {
+    leftMenuOffset = offset
   }
     
   public func setup(drawer: DrawerMenu) {
