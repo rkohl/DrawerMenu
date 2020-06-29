@@ -16,7 +16,7 @@ public enum FloatingPopDisplay: CGFloat {
 public struct FloatingPop: DrawerMenuStyle {
   
   internal var offsetView: UIView = UIView()
-  public let offsetViewPadding:CGFloat = 42.0
+  public var offsetViewPadding:CGFloat = 42.0
   public var leftMenuOffset:CGFloat = 0.6
   public var cornerRadius: CGFloat = 40.0
   public var centerViewOpacity: CGFloat = 0.05
