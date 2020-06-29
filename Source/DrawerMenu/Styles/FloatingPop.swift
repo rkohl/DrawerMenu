@@ -20,7 +20,7 @@ public struct FloatingPop: DrawerMenuStyle {
   public var leftMenuOffset:CGFloat = 0.6
   public var cornerRadius: CGFloat = 40.0
   public var centerViewOpacity: CGFloat = 0.05
-  public var centerScale: CGFloat = 0.80
+  public var centerScale: CGFloat = 0.70
   public var shadowColor: UIColor = .black
   public var shadowRadius: CGFloat = 8.0
   public var shadowOpacity: CGFloat = 0.5
