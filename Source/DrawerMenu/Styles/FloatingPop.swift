@@ -10,7 +10,7 @@ import UIKit
 
 public enum FloatingPopDisplay: CGFloat {
   public typealias RawValue = CGFloat
-  case standard = 0.6, barButton = 0.4, large = 0.8
+  case standard = 0.6, barButton = 0.8, large = 0.4
 }
 
 public struct FloatingPop: DrawerMenuStyle {
