@@ -8,6 +8,11 @@
 
 import UIKit
 
+public enum FloatingPopDisplay: CGFloat {
+  public typealias RawValue = CGFloat
+  case standard = 0.6, barButton = 0.4, large = 0.8
+}
+
 public struct FloatingPop: DrawerMenuStyle {
   
   internal var offsetView: UIView = UIView()
@@ -23,8 +28,8 @@ public struct FloatingPop: DrawerMenuStyle {
     
   public init() {}
   
-  public init(scale: CGFloat) {
-    centerScale = scale
+  public init(_ offset: FloatingPopDisplay) {
+    leftMenuOffset = offset.rawValue
   }
     
   public func setup(drawer: DrawerMenu) {
