@@ -13,15 +13,19 @@ public struct FloatingPop: DrawerMenuStyle {
   internal var offsetView: UIView = UIView()
   public let offsetViewPadding:CGFloat = 42.0
   public let leftMenuOffset:CGFloat = 0.6
-  public var cornerRadius: CGFloat = 36.0
+  public var cornerRadius: CGFloat = 40.0
   public var centerViewOpacity: CGFloat = 0.05
-  public var centerScale: CGFloat = 0.75
+  public var centerScale: CGFloat = 0.80
   public var shadowColor: UIColor = .black
   public var shadowRadius: CGFloat = 8.0
   public var shadowOpacity: CGFloat = 0.5
   public var shadowOffset: CGSize = CGSize(width: 0, height: 0)
     
   public init() {}
+  
+  public init(scale: CGFloat) {
+    centerScale = scale
+  }
     
   public func setup(drawer: DrawerMenu) {
     offsetView.frame = drawer.centerContainerView.bounds
