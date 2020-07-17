@@ -61,7 +61,7 @@ public struct NavigationBarAttributes {
     public var barTanslucent: Bool = false
     public var viewBackgroundColor: UIColor = .systemGroupedBackground
     public var largeTitleDisplay: UINavigationItem.LargeTitleDisplayMode = .always
-    public var extendUnderBars: Bool = false
+    public var extendUnderBars: Bool = true
     
     public init() {}
 }
